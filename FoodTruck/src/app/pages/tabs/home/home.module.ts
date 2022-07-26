@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../../../components/components.module';
 import { BannerComponent } from './../../../components/banner/banner.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +15,8 @@ import { HomePage } from './home.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    ComponentsModule
   ],
   declarations: [HomePage, BannerComponent]
 })

@@ -11,19 +11,15 @@
 
 <ion-content>
 
-<div class="borderBottom">
-  <ion-slides pager="true" [options]="slideOptions" >
-    <ion-slide>
-      <div [ngStyle]="{'background-image':'url(' + 'assets/imgs/1.jpg' + ')'}"></div>   
-    </ion-slide>
-    <ion-slide>
-      <div [ngStyle]="{'background-image':'url(' + 'assets/imgs/2.jpg' + ')'}"></div>   
-    </ion-slide>
-    <ion-slide>
-      <div [ngStyle]="{'background-image':'url(' + 'assets/imgs/3.jpg' + ')'}"></div>   
-    </ion-slide>
-  </ion-slides>
-</div>
+<!-- Make sure that is declared in the home.module.ts before importing it form the component a number
+of steps need to be completed before this made 
+1.create the component page
+2. refactor the code so your not repeating yourself
+3. declare it in the ngModule
+4. app-banner imported -->
+
+
+<app-banner></app-banner>
 
 <ion-list>
   <ion-list-header class="ion-margin-bottom">

@@ -6,6 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit {
+  
+  bannerImages: any[] = [
+    {banner: 'assets/imgs/1.jpg'},
+    {banner: 'assets/imgs/2.jpg'},
+    {banner: 'assets/imgs/5.jpg'},
+  ];
+  
+  slideOptions = {
+    slidesPerView: 1.1
+  }
 
   constructor() { }
 

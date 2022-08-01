@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -7,15 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
   
-  bannerImages: any[] = [
-    {banner: 'assets/imgs/1.jpg'},
-    {banner: 'assets/imgs/2.jpg'},
-    {banner: 'assets/imgs/5.jpg'},
-  ];
-  
+ @Input() bannerImages: any[] = [];
   slideOptions = {
     slidesPerView: 1.1
   }
+  
 
   constructor() { }
 

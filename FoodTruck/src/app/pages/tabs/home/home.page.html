@@ -19,7 +19,7 @@ of steps need to be completed before this made
 4. app-banner imported -->
 
 
-<app-banner></app-banner>
+<app-banner [bannerImages]="banners"></app-banner>
 
 <ion-list>
   <ion-list-header class="ion-margin-bottom">
@@ -28,7 +28,10 @@ of steps need to be completed before this made
       <p>Discover unique foodstalls near you</p>
     </ion-label>
   </ion-list-header>
-  <app-restaurant></app-restaurant>
+  <ion-item-group *ngIf="restaurants?.length > 0">
+    <app-restaurant *ngFor="let restaurant of restaurants"[restaurant]="restaurant" ></app-restaurant>
+  </ion-item-group>
+
 </ion-list>
 
 </ion-content>

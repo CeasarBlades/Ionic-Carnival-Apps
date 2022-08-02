@@ -19,9 +19,13 @@ of steps need to be completed before this made
 4. app-banner imported -->
 
 
-<app-banner [bannerImages]="banners"></app-banner>
+<div *ngIf="isLoading"><ion-skeleton-text animated style="height: 25vh"></ion-skeleton-text></div>
+<app-banner *ngIf="isLoading"[bannerImages]="banners"></app-banner>
 
-<ion-list>
+<app-loading-restaurant *ngIf="isLoading"></app-loading-restaurant>
+
+
+<ion-list *ngIf="!isLoading">
   <ion-list-header class="ion-margin-bottom">
     <ion-label>
       <h4>Restaurants Nearby</h4>
@@ -31,7 +35,8 @@ of steps need to be completed before this made
   <ion-item-group *ngIf="restaurants?.length > 0">
     <app-restaurant *ngFor="let restaurant of restaurants"[restaurant]="restaurant" ></app-restaurant>
   </ion-item-group>
-
 </ion-list>
-
 </ion-content>
+ 
+
+

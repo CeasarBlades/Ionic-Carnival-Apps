@@ -1,3 +1,4 @@
+import { LoadingRestaurantComponent } from './loading-restaurant/loading-restaurant.component';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,14 +8,16 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
-    RestaurantComponent
+    RestaurantComponent,
+    LoadingRestaurantComponent
   ],
   imports: [
     CommonModule,
     IonicModule
   ],
   exports: [
-    RestaurantComponent
+    RestaurantComponent,
+    LoadingRestaurantComponent
   ],
   entryComponents: []
 })

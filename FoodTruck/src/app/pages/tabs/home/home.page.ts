@@ -9,58 +9,64 @@ export class HomePage implements OnInit {
 
   banners: any[] = [];
   restaurants: any[] = [];
+  isLoading: boolean = false;
+  
  
   
 
   constructor() { }
 
   ngOnInit() {
-    this.banners = [
-      {banner: 'assets/imgs/1.jpg'},
-      {banner: 'assets/imgs/2.jpg'},
-      {banner: 'assets/imgs/5.jpg'},
-    ];
-    this.restaurants = [
-       {
-        cover: 'assets/imgs/1.jpg',
-        name: 'Glorious Buns1',
-        cuisines: [
-          'Burgers',
-          'Fries'
-        ],
-        rating: 5,
-        delivery_time: 25,
-        distance: 2.5,
-        price: 100,
+    this.isLoading = true;
+    setTimeout(() => {
+      this.banners = [
+        {banner: 'assets/imgs/1.jpg'},
+        {banner: 'assets/imgs/2.jpg'},
+        {banner: 'assets/imgs/5.jpg'},
+      ];
+      this.restaurants = [
+         {
+          cover: 'assets/imgs/1.jpg',
+          name: 'Glorious Buns1',
+          cuisines: [
+            'Burgers',
+            'Fries'
+          ],
+          rating: 5,
+          delivery_time: 25,
+          distance: 2.5,
+          price: 100,
+      
+        },
+        {
+          cover: 'assets/imgs/2.jpg',
+          name: 'Glorious Buns2',
+          cuisines: [
+            'Burgers',
+            'Fries'
+          ],
+          rating: 5,
+          delivery_time: 25,
+          distance: 2.5,
+          price: 100,
+      
+        },
+        {
+          cover: 'assets/imgs/3.jpg',
+          name: 'Glorious Buns3',
+          cuisines: [
+            'Burgers',
+            'Fries'
+          ],
+          rating: 5,
+          delivery_time: 25,
+          distance: 2.5,
+          price: 100,
+        },
+      ];
+      this.isLoading = false;
+    }, 3000);
     
-      },
-      {
-        cover: 'assets/imgs/1.jpg',
-        name: 'Glorious Buns2',
-        cuisines: [
-          'Burgers',
-          'Fries'
-        ],
-        rating: 5,
-        delivery_time: 25,
-        distance: 2.5,
-        price: 100,
-    
-      },
-      {
-        cover: 'assets/imgs/1.jpg',
-        name: 'Glorious Buns3',
-        cuisines: [
-          'Burgers',
-          'Fries'
-        ],
-        rating: 5,
-        delivery_time: 25,
-        distance: 2.5,
-        price: 100,
-    
-      }
-    ]
   }
 
 }

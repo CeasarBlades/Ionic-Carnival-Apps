@@ -28,6 +28,7 @@ export class HomePage implements OnInit {
          {
           cover: 'assets/imgs/1.jpg',
           name: 'Glorious Buns1',
+          short_name: 'glorious buns1',
           cuisines: [
             'Burgers',
             'Fries'
@@ -41,6 +42,7 @@ export class HomePage implements OnInit {
         {
           cover: 'assets/imgs/2.jpg',
           name: 'Glorious Buns2',
+          short_name: 'glorious buns2',
           cuisines: [
             'Burgers',
             'Fries'
@@ -54,6 +56,7 @@ export class HomePage implements OnInit {
         {
           cover: 'assets/imgs/3.jpg',
           name: 'Glorious Buns3',
+          short_name: 'glorious buns3',
           cuisines: [
             'Burgers',
             'Fries'

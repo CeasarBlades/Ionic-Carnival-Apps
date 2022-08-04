@@ -9,6 +9,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class SearchPage implements OnInit {
 
   @ViewChild("searchInput") sInput;
+  isLoading: boolean;
   query: any[]
   allRestaurants: any [] = [
     {
@@ -21,7 +22,7 @@ export class SearchPage implements OnInit {
      ],
      rating: 5,
      delivery_time: 25,
-     distance: 2.5,
+    //  distance: 2.5,
      price: 100,
  
    },
@@ -35,7 +36,7 @@ export class SearchPage implements OnInit {
      ],
      rating: 5,
      delivery_time: 25,
-     distance: 2.5,
+    //  distance: 2.5,
      price: 100,
  
    },
@@ -49,7 +50,7 @@ export class SearchPage implements OnInit {
      ],
      rating: 5,
      delivery_time: 25,
-     distance: 2.5,
+    //  distance: 2.5,
      price: 100,
    },
  ];

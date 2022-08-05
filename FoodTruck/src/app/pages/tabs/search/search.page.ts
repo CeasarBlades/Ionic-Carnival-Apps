@@ -9,6 +9,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class SearchPage implements OnInit {
 
   @ViewChild("searchInput") sInput;
+  model: any = {
+    icon: 'search-outline',
+    title: 'No Restaurants found'
+  };
   isLoading: boolean;
   query: any[]
   allRestaurants: any [] = [
@@ -65,17 +69,21 @@ export class SearchPage implements OnInit {
     },500)
   }
 
-  onSearchChange(event) {
+  async onSearchChange(event) {
     console.log(event.detail.value);
     this.query = event.detail.value.toLowerCase();
     if(this.query.length > 0) {
-      this.restaurants = this.allRestaurants.filter((element: any) => {
-        return element.short_name.includes(this.query);
-      });
-      console.log(this.restaurants);
+      this.isLoading = true;
+      setTimeout(async() => {
+        this.restaurants = await this.allRestaurants.filter((element: any) => {
+          return element.short_name.includes(this.query);
+        });
+        console.log(this.restaurants);
+        this.isLoading = false;
+      }, 3000);
     }
+  }
+}
+
     
 
-  }
-
-}

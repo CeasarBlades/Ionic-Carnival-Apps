@@ -17,6 +17,7 @@ export class SearchPage implements OnInit {
   query: any[]
   allRestaurants: any [] = [
     {
+     uid: 'jbndfij',
      cover: 'assets/imgs/1.jpg',
      name: 'Glorious Buns1',
      short_name: 'glorious buns1',
@@ -26,11 +27,11 @@ export class SearchPage implements OnInit {
      ],
      rating: 5,
      delivery_time: 25,
-    //  distance: 2.5,
      price: 100,
  
    },
    {
+     uid: '6512644',
      cover: 'assets/imgs/2.jpg',
      name: 'Glorious Buns2',
      short_name: 'glorious buns2',
@@ -40,11 +41,11 @@ export class SearchPage implements OnInit {
      ],
      rating: 5,
      delivery_time: 25,
-    //  distance: 2.5,
      price: 100,
  
    },
    {
+     uid: '651fgfgfsdgfd',
      cover: 'assets/imgs/3.jpg',
      name: 'Glorious Buns3',
      short_name: 'glorious buns3',
@@ -54,7 +55,6 @@ export class SearchPage implements OnInit {
      ],
      rating: 5,
      delivery_time: 25,
-    //  distance: 2.5,
      price: 100,
    },
  ];
@@ -66,7 +66,7 @@ export class SearchPage implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.sInput.setFocus();
-    },500)
+    }, 500)
   }
 
   async onSearchChange(event) {

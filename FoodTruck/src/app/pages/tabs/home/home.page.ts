@@ -26,6 +26,7 @@ export class HomePage implements OnInit {
       ];
       this.restaurants = [
          {
+          uid: 'jbndfij',
           cover: 'assets/imgs/1.jpg',
           name: 'Glorious Buns1',
           short_name: 'glorious buns1',
@@ -40,6 +41,7 @@ export class HomePage implements OnInit {
       
         },
         {
+          uid: '6512644',
           cover: 'assets/imgs/2.jpg',
           name: 'Glorious Buns2',
           short_name: 'glorious buns2',
@@ -54,6 +56,7 @@ export class HomePage implements OnInit {
       
         },
         {
+          uid: '651fgfgfsdgfd',
           cover: 'assets/imgs/3.jpg',
           name: 'Glorious Buns3',
           short_name: 'glorious buns3',
